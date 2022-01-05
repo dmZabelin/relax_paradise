@@ -1,0 +1,258 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+body {
+	margin:0;
+	min-width: 320px;
+	font: 400 1.6rem "Montserrat", sans-serif;
+	line-height: 1;
+	color: $text-color;
+	letter-spacing: .04em;
+	user-select: none;
+	&.hidden {
+		overflow-y: hidden;
+	}
+}
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+.btn {
+	text-transform: uppercase;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 1.4rem;
+	line-height: 1;
+	border-width: 0.2rem;
+	border-style: solid;
+	background-color: transparent;
+	text-align: center;
+	transition-duration: .3s;
+	transition-timing-function: ease;
+	&:active {
+		//transform: scale(.97) translate(.2rem, .2rem);
+		&::after {
+			animation: none;
+		}
+	}
+	&:disabled {
+		cursor: not-allowed;
+	}
+}
+.mobile-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	display: flex;
+	height: 100vh;
+	width: 35%;
+	background-color: #fff;
+	justify-content: flex-end;
+	transform: translate(-200%);
+	transition: transform 1s ease;
+	&.show {
+		transform: translate(0);
+	}
+	nav {
+		margin-bottom: 10rem;
+	}
+	&__navigation-wrapper {
+		height: 100%;
+		width: 100%;
+		max-width: 32rem;
+		padding: 2.5rem 2.5rem 2.5rem 1rem;
+		display: inline-flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	&__logo {
+		position: relative;
+		z-index: 99;
+		display: inline-block;
+		margin-bottom: 10rem;
+
+		img{
+			width: 7rem;
+			margin-bottom: 1rem;
+		}
+	}
+	&__logo-txt {
+		font-family: "Miama Nueva";
+		font-size: 2.4rem;
+		color: $main-color;
+	}
+	&__lang {
+		justify-content: center;
+		margin-bottom: 10rem;
+	}
+	&__lang-link {
+		padding: 1rem 0.75rem 0.75rem 0.75rem;
+		border:.1rem solid transparent;
+	}
+	&__item:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+	&__item-link {
+		position: relative;
+		text-transform: uppercase;
+		font-size: 1.8rem;
+		z-index: 1;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 35%;
+			display: block;
+			width: 100%;
+			height: 65%;
+			background-color: $main-color;
+			z-index: -1;
+			opacity: 0;
+			transition: opacity ease .5s;
+		}
+		&:hover::before {
+			opacity: 1;
+		}
+	}
+	&__social {
+		justify-content: center;
+		align-items: center;
+		color: $main-color;
+	}
+	&__social-descr {
+		margin-bottom: 1rem;
+		display: block;
+		font-weight: 500;
+		line-height: 1.5;
+	}
+	&__social-link {
+		svg {
+			width: 2.5rem;
+		}
+		&:not(:last-child) {
+			margin-right: 2rem;
+		}
+	}
+}
+
+.section-title {
+	position: relative;
+	text-transform: uppercase;
+	font-size: 3rem;
+	font-weight: 500;
+	&::before {
+		content: "";
+		position: absolute;
+		left: -1.8rem;
+		top: -1.5rem;
+		width: 4rem;
+		height: 4rem;
+		display: block;
+		background-color: $second-color;
+		z-index: -1;
+	}
+}
+.burger {
+	position: fixed;
+	top: 0;
+	left: -5rem;
+	width: 100%;
+	height: 0;
+	z-index: 10;
+	&__link {
+		position: absolute;
+		top: 3rem;
+		display: inline-block;
+		width: 3.5rem;
+		height: 2rem;
+		cursor: pointer;
+		span {
+			position: absolute;
+			display: inline-block;
+			width: 100%;
+			height: .3rem;
+			-webkit-transition: .5s;
+			transition: .5s;
+			background-color: $main-color;
+			outline: .01rem solid rgb(255, 255, 255, .5);
+			&:nth-child(1) {
+				top: 0;
+			}
+			&:nth-child(2) {
+				top: 50%;
+				margin-top: -.15rem;
+			}
+			&:nth-child(3) {
+				bottom: 0;
+				margin-left: 0;
+				padding-top: 0;
+			}
+		}
+	}
+}
+#burger[hidden] {
+	display: none;
+}
+.mh_active span {
+	&:nth-child(1) {
+		top: .8rem;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	&:nth-child(2) {
+		width: 0;
+		opacity: 0;
+	}
+
+	&:nth-child(3) {
+		bottom: .9rem;
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+}
+.arrows {
+	span {
+		display: inline-block;
+		width: 11.5rem;
+		cursor: pointer;
+		transition: opacity .3s ease;
+	}
+	svg {
+		display: none;
+	}
+}
+.arrow-prev {
+	margin-right: 2rem;
+}
+
+.js-validate-error-label {
+	position: absolute;
+	bottom: - 2.5rem;
+	left: 0;
+	color: rgb(179, 68, 68) !important;
+}
+.js-validate-error-field {
+	border: none !important;
+	border-bottom: 1px solid rgb(179, 68, 68) !important;
+	color: rgb(179, 68, 68) !important;
+}
+
+.form__tnx {
+	color: green;
+}
+
+.fslightbox-container {
+	background: rgba(255, 255, 255, 0.8) !important;
+}
+.fslightbox-slide-number-container {
+	color: $main-color !important;
+}
+
+.fslightbox-slash {
+	background: $main-color !important;
+}
+

@@ -1,0 +1,60 @@
+.aura {
+	padding: 5rem 0;
+
+	&__wrapper {
+		margin-bottom: 4rem;
+		align-items: flex-start;
+		
+	}
+
+	&__content {
+		margin-right: 3rem;
+	}
+
+	&__title {
+		margin-bottom: 4rem;
+	}
+
+	&__subtitle {
+		margin-bottom: 5rem;
+		padding-left: 4rem;
+		max-width: 57.5rem;
+		line-height: 3rem;
+	}
+
+	&__btn {
+		padding: 1.5rem 2.5rem;
+		background-color: $main-color;
+		border-color: $main-color;
+		color: #fff;
+		transform: translateX(4rem);
+	}
+
+	&__video {
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 7rem;
+			height: 5rem;
+			top: calc(50% - 3.5rem);
+			left: calc(50% - 2.5rem);
+			background-color: $main-color;
+			background-image: url("../img/play.png");
+			background-repeat: no-repeat;
+			background-position: center left 2.5rem;
+			border-radius: 1rem;
+			
+		}
+	}
+
+	&__gallery {
+		justify-content: space-between;
+	
+		li {
+			margin: .5rem;
+		}
+	}	
+}

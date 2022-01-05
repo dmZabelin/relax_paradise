@@ -1,0 +1,27 @@
+-
+	let menuList = [
+		{
+			name: "Портфолио",
+			slug: "#",
+		}, {
+			name: "Услуги",
+			slug: "#",
+		},{
+			name: "Стоимость",
+			slug: "#",
+		},{
+			name: "Отзывы",
+			slug: "#",
+		},{
+			name: "Блог",
+			slug: "#",
+		},{
+			name: "Контакты",
+			slug: "#",
+		},
+	];
+nav
+	ul.navigation__list
+		each item in menuList
+			li
+				a.navigation__link.scroll(href=("#" + item.slug))= item.name

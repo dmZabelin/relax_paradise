@@ -1,0 +1,90 @@
+.action {
+	padding: 5rem 0;
+
+	&__bg {
+		background-image: url("../img/action_bg.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		color: #fff;
+	}
+	
+	&__img {
+		margin-right: 8rem;
+		font-size: 0;
+		margin-top: -6.75rem;
+		img {
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__info {
+		padding: 4.75rem 0;
+	}
+	
+	&__title {
+		margin-bottom: 3rem;
+		max-width: 47rem;
+		display: flex;
+		align-items: flex-end;
+		font-size: 6rem;
+		line-height: 1;
+		font-weight: 700;
+
+		span {
+			padding-left: 2rem;
+			font-size: 9rem;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 2rem;
+		font-size: 3rem;
+		height: 3rem;
+		font-weight: 500;
+		opacity: .8;
+	}
+
+	&__descr {
+		margin-bottom: 3rem;
+		max-width: 31rem;
+		font-size: 1.4rem;
+		line-height: 1.5;
+		opacity: .7;
+	}
+
+	&__form {
+		min-height: 4.6rem;
+		span {
+			padding-top: 1rem;
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			margin-right: 3.5rem;
+		}
+		input {
+			width: 100%;
+			max-width: 22rem;
+			padding: .5rem;
+			font: 400 1.6rem "Montserrat", sans-serif;
+			background-color: transparent;
+			border: none;
+			border-bottom: 1px solid rgba(255, 255, 255, .8);
+			color: rgba(255, 255, 255, .8);
+		}
+
+		@include placeholder(rgba(255, 255, 255, .3), 1.6rem);
+	}
+	&__wrapper {
+		align-items: flex-start;
+	}
+	&__btn {
+		width: 100%;
+		max-width: 18rem;
+		padding: 1.4rem;
+		background-color: #fff;
+		border-color: #fff;
+		text-align: center;
+	}
+}

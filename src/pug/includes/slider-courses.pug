@@ -1,0 +1,72 @@
+-
+	let sliderCourses = [
+		{
+			img: "dist/assets/img/foto.jpg",
+			alt: "Классический",
+			title: "<span>Курс</span> Классический",
+			descr: "Нормализация мышечного тонуса, устранение судорог и мышечных спазмов, восстановление контуров тела, избавление от отеков, уменьшение жировой клетчатки, укрепление мышечного карсета, улучшение подвижнотси суставов, позвонков, восстановление нормального объема движений.",
+			time: "Продолжительность курса - <span>10</span> сенсов.",
+			price: "Стоимость сеанса (90 минут) - <span>500</span> грн.",
+			dataInfo: "course-classic",
+		},{
+			img: "dist/assets/img/foto.jpg",
+			alt: "Анатомические поезда",
+			title: "<span>Курс</span> Анатомические поезда",
+			descr: "Моделирование фигуры и коррекция осанки на основе ультрасовременной концепции \"Анатомические поезда\"",
+			time: "Продолжительность курса до - <span>12</span> сеансов.",
+			price: "Стоимость сеанса (90-120 минут) - <span>600</span> грн.",
+			dataInfo: "course-train",
+		},{
+			img: "dist/assets/img/foto.jpg",
+			alt: "Лимфодренажный",
+			title: "<span>Курс</span> Лимфодренажный",
+			descr: "Улучшение лимфотока, кровотока и питания тканей, ускорение обмена веществ. Существенное уменьшение подкожной жировой клетчатки. Избавление от отеков и целлюлита. Значительное улучшение упругости кожи.",
+			time: "Продолжительность курса - <span>10</span> сеансов.",
+			price: "Стоимость сеанса (90минут) - <span>600</span> грн.",
+			dataInfo: "course-lymph",
+		},{
+			img: "dist/assets/img/foto.jpg",
+			alt: "Антицеллюлитный",
+			title: "<span>Курс</span> Антицеллюлитный",
+			descr: "Скрабирование, ручной массаж, обертывание.",
+			time: "Продолжительность курса - <span>10</span> сеансов.",
+			price: "Стоимость сеанса (90минут) - <span>500</span> грн.",
+			dataInfo: "course-anti",
+		},{
+			img: "dist/assets/img/foto.jpg",
+			alt: "Сигментарный",
+			title: "<span>Курс</span> Сигментарный",
+			descr: "Оздоровительный классический массаж воротниковой зоны, спины, живота, головы, рук, ног - на Ваш выбор.",
+			time: "Продолжительность курса - <span>10</span> сеансов.",
+			price: "Стоимость сеанса (45минут) - <span>400</span> грн.",
+			dataInfo: "course-sigment",
+		},{
+			img: "dist/assets/img/foto.jpg",
+			alt: "Спортивный",
+			title: "<span>Курс</span> Спортивный",
+			descr: "Массаж перед тренировкой. Восстановительный массаж. Предстартовый массаж.",
+			time: "Продолжительность курса - <span>10</span> сеансов.",
+			price: "Стоимость сеанса (60 минут) - <span>500</span> грн.",
+			dataInfo: "course-sport",
+		},
+	];
+.swiper.services__slider-main.slider-main.slider-main_two
+	.swiper-wrapper
+		each item in sliderCourses
+			.slider-main__card.d-flex.swiper-slide
+				.slider-main__img
+					img(src=item.img, alt="Курс " + item.alt)
+				.slider-main__info
+					h3.slider-main__title!= item.title
+					p.slider-main__descr!= item.descr
+					p.slider-main__time!= item.time
+					p.slider-main__price!= item.price
+					.slider-main__btn-wrapper.d-flex
+						button.btn.slider-main__btn(data-info=item.dataInfo) Подробнее о курсе
+						a(href="https://dikidi.net/#widget=67317").btn.slider-main__btn Записаться на сеанс
+.swiper.services__slider-secondary.slider-secondary.slider-secondary_two(data-class="two", thumbsSlider="")
+	.swiper-wrapper
+		each item in sliderCourses
+			.slider-secondary__card.swiper-slide
+				p.slider-secondary__title!= item.alt
+				img(src=item.img alt="Курс" + item.alt)

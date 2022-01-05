@@ -1,0 +1,21 @@
+-
+	let menuMobile = [
+		{
+			name: "Услуги",
+			slug: "services",
+		}, {
+			name: "Акции",
+			slug: "action",
+		},{
+			name: "О нас",
+			slug: "aura",
+		},{
+			name: "Контакты",
+			slug: "contacts",
+		},
+	];
+nav
+	ul.mobile-menu__list
+		each item in menuMobile
+			li.mobile-menu__item
+				a.mobile-menu__item-link.scroll(href=("#" + item.slug))= item.name

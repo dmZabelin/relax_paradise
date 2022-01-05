@@ -1,0 +1,31 @@
+section#services.services
+	.container
+		h2.services__title.section-title Услуги и тарифы
+		//- p.services__subtitle lorem
+		include ../../includes/tab-list.pug
+		#relax.services__tab-content(style="display:block;")
+			.services__arrows.arrows
+				span.services__arrow-prev.arrow-prev.arrow-prev_one
+					img(src="dist/assets/img/arrow_prev.svg", alt="Стрелка назад")
+				span.services__arrow-next.arrow-next.arrow-next_one
+					img(src="dist/assets/img/arrow_next.svg" alt="Стрелка вперед")
+				include ../../svg/swipe.pug
+			include ../../includes/slider-prog.pug
+		#courses.services__tab-content(style="display:none;")
+			.services__arrows.arrows
+				span.services__arrow-prev.arrow-prev.arrow-prev_two
+					img(src="dist/assets/img/arrow_prev.svg", alt="Стрелка назад")
+				span.services__arrow-next.arrow-next.arrow-next_two
+					img(src="dist/assets/img/arrow_next.svg" alt="Стрелка вперед")
+				include ../../svg/swipe.pug
+			include ../../includes/slider-courses.pug
+		#face.services__tab-content(style="display:none;")
+			.services__arrows.arrows
+				span.services__arrow-prev.arrow-prev.arrow-prev_three
+					img(src="dist/assets/img/arrow_prev.svg", alt="Стрелка назад")
+				span.services__arrow-next.arrow-next.arrow-next_three
+					img(src="dist/assets/img/arrow_next.svg" alt="Стрелка вперед")
+				include ../../svg/swipe.pug
+			include ../../includes/slider-face.pug
+
+

@@ -1,0 +1,35 @@
+extends ../template/main-template.pug
+block variables
+	- var title = "Relax paradise - студия массажа."
+
+prepend styles
+	link(rel="stylesheet" href="dist/libs/css/swiper-bundle.min.css")
+
+block header
+	include ../snippets/header.pug
+
+block content
+	include ../snippets/main-content.pug
+
+block footer
+	include ../snippets/footer.pug
+
+block popaps
+	include ../snippets/burger.pug
+	include ../snippets/mobile-menu.pug
+	include ../snippets/modal-ring.pug
+	include ../snippets/modal-massage.pug
+
+prepend scripts
+	script(src="dist/libs/js/inputmask.min.js")
+	script(src="dist/libs/js/just-validate.min.js")
+	script(src="dist/libs/js/anime.min.js")
+	script(src="dist/libs/js/typed.min.js")
+	script(src="dist/libs/js/fslightbox.js")
+
+append scripts
+	script(src="dist/libs/js/googleMap.js")
+	script(src="dist/libs/js/widget2.min.js")
+	script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7fOr4hUJ-VG92YPty5fCkdnYtTeqZ7Ro&callback=initMap")
+	script(src="dist/libs/js/swiper-bundle.min.js")
+	script(src="dist/libs/js/initialSwiper.js")

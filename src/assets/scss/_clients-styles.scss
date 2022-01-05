@@ -1,0 +1,66 @@
+.clients {
+	padding: 5rem 0;
+
+	&__title {
+		margin-bottom: 4rem;
+	}
+
+	&__wrapper {
+		margin-bottom: 5rem;
+		align-items: flex-end;
+	}
+
+	&__subtitle {
+		max-width: 57.5rem;
+		padding-left: 4rem;
+		margin-right: auto;
+		line-height: 3rem;
+	}
+
+	&__slider {
+		justify-content: center;
+	}
+
+	&__card {
+		margin-right: 1.5rem;
+		margin-left: 1.5rem;
+		width: 100%;
+		max-width: 55rem;
+		max-height: 30rem;
+		color: #fff;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top center;
+
+		&:nth-child(1) {
+			background-image: url("../img/test1.jpg");
+		}
+
+		&:nth-child(2) {
+			background-image: url("../img/test2.jpg");
+		}
+	}
+
+	&__review {
+		width: 50%;
+		height: 100%;	
+		padding: 2.5rem;
+		background-color: rgba(45, 71, 86, .7);
+	}
+
+	&__name {
+		margin-bottom: 2rem;
+		font-size: 2rem;
+		font-weight: 500;
+	}
+
+	&__link {	
+		margin-bottom: 2rem;
+		display: inline-block;
+		font-weight: 700;
+	}
+
+	&__txt {
+		line-height: 1.5;
+	}
+}

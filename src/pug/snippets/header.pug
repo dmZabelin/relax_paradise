@@ -1,0 +1,38 @@
+header.header
+	.container.header__container.d-flex
+		.header__navigation
+			.header__navigation-wrapper
+				a(href="https://relax-paradise.com/", aria-label="relax paradise link").header__logo
+					img(src="dist/assets/img/relax_paradise_logo.svg", alt="logo")
+					p.header__logo-txt relax paradise
+				include ../includes/menu-list.pug
+				//- .header__lang.d-flex
+					a(href="#").header__lang-link.link-active RU
+					a(href="#").header__lang-link UA
+				.header__social.d-flex
+					p.header__social-descr
+						span Подпишись
+						include ../svg/hand-point-right.pug
+					a(href="https://www.instagram.com/relax_paradise_com/?hl=ru", target="_blank").header__social-link
+						include ../svg/instagram.pug
+					a(href="https://www.facebook.com/relax_paradise_com-102350368951556", target="_blank").header__social-link
+						include ../svg/facebook.pug
+		.header__offer.offer
+			.offer__ring.d-flex
+				a(href="tel:+380996430131").offer__ring-link
+					include ../svg/phone.pug
+					span +380 (99) <span>643 01 31</span>
+				button.btn.offer__btn.offer__btn_ring.popap-call(data-title="Обратный звонок") Закажите звонок
+			.offer__wrapper
+				span.test(style="color: red; display: inline-block; margin-bottom: 2rem;") Сайт находится в тестовом режиме!
+				h1.offer__title_seo Семейная студия массажа Relax Paradise.
+				p.offer__title Семейная студия массажа &laquo;Relax&nbsp;Paradise&raquo;
+				p.offer__subtitle Придай упругость и&nbsp;подтянутость своему телу с&nbsp;помощью эффективного массажа
+				.offer__btn-wrapper.d-flex
+					button.btn.offer__btn.offer__btn_consultation.popap-call(data-title="Получить консультацию") Получить консультацию
+					a(href="https://dikidi.net/#widget=67317").btn.offer__btn.offer__btn_session Записаться на сеанс
+				.offer__social.d-flex
+					a(href="https://www.instagram.com/relax_paradise_com/?hl=ru", target="_blank").offer__social-link
+						include ../svg/instagram.pug
+					a(href="https://www.facebook.com/relax_paradise_com-102350368951556", target="_blank").offer__social-link
+						include ../svg/facebook.pug

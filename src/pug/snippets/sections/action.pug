@@ -1,0 +1,22 @@
+article#action.action
+	.action__bg
+		.container.d-flex
+			.action__img
+				img(src="dist/assets/img/frank.png" alt="Акция -20%")
+			.action__info
+				h2.action__title Дарим скидку <span>20%</span>
+				div#typed-strings
+					p на первое посещение
+					p в честь дня рождения
+					p на посещение вдвоем
+				p#typed.action__subtitle
+				p.action__descr Заполните, пожалуйста, поля ниже, и&nbsp;мы&nbsp;обязательно свяжемся с&nbsp;Вами.
+				form.action__form(action="mailer.php" method="post")
+					fieldset
+						legend Форма заказа звонка
+						.action__wrapper.d-flex
+							span
+								input.form-control(type="text", name="name", placeholder="Ваше имя", data-validate-field= "name")
+							span
+								input.form-control(type="tel", name="tel", placeholder="+380 (__) ___ __ __ ", data-validate-field= "tel", data-validate-rules="phone")
+							button.btn.action__btn.btn-primary Перезвоните мне

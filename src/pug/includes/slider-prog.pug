@@ -1,0 +1,80 @@
+-
+	let sliderCard = [
+		{
+			img: "dist/assets/img/relax_classic.jpg",
+			alt: "Relax classic",
+			title: "<span>Пограмма</span> Relax classic",
+			descr: "<strong>Классический массаж всего тела</strong> масляный, кремовый или пудровый с возможностью выбора аром компонентов как часть ароматерапии.",
+			time: "Длительность программы - <span>90</span> минут.",
+			price: "Стоимость программы - <span>950</span> грн.",
+			dataInfo: "programm-classic",
+		}, {
+			img: "dist/assets/img/Thai_Relax.jpg",
+			alt: "Тhai Relaxx",
+			title: "<span>Пограмма</span> Thai Relax",
+			descr: "<strong>Тайский массаж всего тела.</strong> Более двух тысяч лет назад близкий друг Будды и личный лекарь одного индийского царя Джавака Кумар Бхаши придумал массаж, который способен заменить всю овременную медицину.",
+			time: "Длительность программы - <span>90</span> минут.",
+			price: "Стоимость программы - <span>950</span> грн.",
+			dataInfo: "programm-thai",
+		},{
+			img: "dist/assets/img/Lomi-Lomi_Relax.jpg",
+			alt: "Lomi-Lomi Relax",
+			title: "<span>Пограмма</span> Lomi-Lomi Relax",
+			descr: "<strong>Гавайский массаж всего тела Ломи-Ломи</strong> - представляет собой один из наиболее древних видов массажа. Название данной массажной техники можно перевести как «мягкое касание бархатной лапы овольного кота».",
+			time: "Длительность программы - <span>90</span> минут.",
+			price: "Стоимость программы - <span>950</span> грн.",
+			dataInfo: "programm-lomi",
+		},{
+			img: "dist/assets/img/Enrike_Garsia_Relax.jpg",
+			alt: "Еnrike Garsia Relax",
+			title: "<span>Пограмма</span> Enrike Garsia Relax",
+			descr: "<strong>Испанский миоструктурный массаж всего тела (хиромассаж).</strong> Главная цель – максимальная мышечная релаксация, воздействие на лимфу и нормализация ее оттока, улучшение метаболических процессов.",
+			time: "Длительность программы - <span>90</span> минут.",
+			price: "Стоимость программы - <span>950</span> грн.",
+			dataInfo: "programm-enrike",
+		},{
+			img: "dist/assets/img/VIP_Body_relax.jpg",
+			alt: "Assorted Relax",
+			title: "<span>Пограмма</span> Assorted Relax",
+			descr: "<strong>Авторский массаж всего тела</strong> в исполнении мастера девушки. Массаж который в себе собрал наиболее продуктивные элементы восточных и западных техник.",
+			time: "Длительность программы - <span>90</span> минут.",
+			price: "Стоимость программы - <span>950</span> грн.",
+			dataInfo: "programm-assorted",
+		},{
+			img: "dist/assets/img/VIP_Relax.jpg",
+			alt: "VIP Relax",
+			title: "<span>Пограмма</span> VIP Relax",
+			descr: "<strong>Авторский массаж всего тела</strong> - разработанный специально для нашей студии в тесном сотрудничестве с чемпионом мира по массажу 2018 года в Париже японским терапевтом TOKUTO.",
+			time: "Длительность программы - <span>110</span> минут.",
+			price: "Стоимость программы - <span>1100</span> грн.",
+			dataInfo: "programm-viprelax",
+		},{
+			img: "dist/assets/img/Yin-Yang_Relax.jpg",
+			alt: "Yin-Yang Relax",
+			title: "<span>Пограмма</span> Yin-Yang Relax",
+			descr: "<strong>Авторский массаж всего тела в 4-е руки.</strong> Максимальный эффект достигается, если массаж в 4-е руки проводят женщина и мужчина, это способствует восстановлению баланса энергетических каналов (женского и мужского).",
+			time: "Длительность программы - <span>90</span> минут.",
+			price: "Стоимость программы - <span>1400</span> грн.",
+			dataInfo: "programm-yinyang",
+		},
+	];
+.swiper.services__slider-main.slider-main.slider-main_one
+	.swiper-wrapper
+		each item in sliderCard
+			.slider-main__card.d-flex.swiper-slide
+				.slider-main__img
+					img(src=item.img, alt="Массаж " + item.alt)
+				.slider-main__info
+					h3.slider-main__title!= item.title
+					p.slider-main__descr!= item.descr
+					p.slider-main__time!= item.time
+					p.slider-main__price!= item.price
+					.slider-main__btn-wrapper.d-flex
+						button.btn.slider-main__btn(data-info=item.dataInfo) Подробнее о программе
+						a(href="https://dikidi.net/#widget=67317").btn.slider-main__btn Записаться на сеанс
+.swiper.services__slider-secondary.slider-secondary.slider-secondary_one(data-class="one", thumbsSlider="")
+	.swiper-wrapper
+		each item in sliderCard
+			.slider-secondary__card.swiper-slide
+				p.slider-secondary__title!= item.alt
+				img(src=item.img alt="Массаж" + item.alt)

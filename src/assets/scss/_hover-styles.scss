@@ -1,0 +1,33 @@
+@media only screen and (min-width: 1024px) {
+	.offer {
+		&__btn_session {
+			&:hover {
+				background-color: $hover-color;
+				&::after {
+					animation: none;
+				}
+			}
+		}
+		&__btn_consultation,
+		&__btn_ring {
+			&:hover {
+				background-color: $hover-color;
+				color:#fff;
+			}
+		}
+	}
+
+	.header {
+		&__item-link {	
+			&:hover::before {
+				opacity: 1; 
+			}
+		}
+	}
+
+	.slider-main {
+		&__info {
+			min-height: 46rem;
+		}
+	}
+}

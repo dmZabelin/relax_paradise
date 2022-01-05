@@ -1,0 +1,10 @@
+-
+	var servicesList = [
+		{ name: "Программы \“Relax\”", data: "relax", active: true, },
+		{ name: "Оздоровительные курсы", data: "courses", active: false, },
+		{ name: "Массаж лица", data: "face", active: false, },
+	];
+ul.services__list.list-tab.d-flex
+	each item in servicesList
+		li
+			button.btn.list-tabs__btn(class=item.active ? "active" : "", data-id=item.data)= item.name

@@ -1,0 +1,17 @@
+.mobile-menu
+	.mobile-menu__navigation-wrapper
+		a(href="https://relax-paradise.com/" aria-label="relax paradise link").mobile-menu__logo
+			picture
+				source(srcset="dist/assets/img/white_logo.png" media="(max-width: 577px)")
+				img(src="dist/assets/img/relax_paradise_logo.svg" alt="logo")
+			p.mobile-menu__logo-txt relax paradise
+		include ../includes/menu-mobile.pug
+		//- .mobile-menu__lang.d-flex
+			a(href="#").mobile-menu__lang-link.link-active RU
+			a(href="#").mobile-menu__lang-link UA
+		.mobile-menu__social
+			p.mobile-menu__social-descr Подпишись
+			a(href="https://www.instagram.com/relax_paradise_com/?hl=ru" target="_blank").mobile-menu__social-link
+				include ../svg/instagram.pug
+			a(href="https://www.facebook.com/relax_paradise_com-102350368951556" target="_blank").mobile-menu__social-link
+				include ../svg/facebook.pug

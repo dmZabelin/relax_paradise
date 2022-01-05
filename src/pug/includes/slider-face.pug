@@ -1,0 +1,40 @@
+-
+	let sliderFace = [
+		{
+			img: "dist/assets/img/foto.jpg",
+			alt: "Коруги",
+			title: "<span>Массаж лица</span> Коруги",
+			descr: "Массаж лица «КОРУГИ» покорил звезд по всему миру: улучшает состояние кожи, подтягивает ее, убирает морщины. Он затрагивает кости черепа, а не только кожу и мышцы. Другое название «КОРУГИ» - «ручная пластическая операция».",
+			time: "Продолжительность сеанса - <span>60</span> минут.",
+			price: "Стоимость сеанса - <span>500</span> грн.",
+			dataInfo: "face-corugi",
+		},{
+			img: "dist/assets/img/foto.jpg",
+			alt: "Испанский массаж",
+			title: "<span>Массаж лица</span> Испанский массаж",
+			descr: "Испанский хиропластический массаж лица - уникальная техника мануальной терапии, которая влияет на состояние мышц, кровеносную и лимфатическую системы, цвет кожи лица. Лифтинг эффект заметен после каждой процедуры.",
+			time: "Продолжительность сеанса - <span>60</span> минут.",
+			price: "Стоимость сеанса - <span>500</span> грн.",
+			dataInfo: "face-ispan",
+		},
+	];
+.swiper.services__slider-main.slider-main.slider-main_three
+	.swiper-wrapper
+		each item in sliderFace
+			.slider-main__card.d-flex.swiper-slide
+				.slider-main__img
+					img(src=item.img, alt="Курс " + item.alt)
+				.slider-main__info
+					h3.slider-main__title!= item.title
+					p.slider-main__descr!= item.descr
+					p.slider-main__time!= item.time
+					p.slider-main__price!= item.price
+					.slider-main__btn-wrapper.d-flex
+						button.btn.slider-main__btn(data-info=item.dataInfo) Подробнее о массаже
+						a(href="https://dikidi.net/#widget=67317").btn.slider-main__btn Записаться на сеанс
+.swiper.services__slider-secondary.slider-secondary.slider-secondary_three(data-class="three", thumbsSlider="")
+	.swiper-wrapper
+		each item in sliderFace
+			.slider-secondary__card.swiper-slide
+				p.slider-secondary__title!= item.alt
+				img(src=item.img alt="Курс" + item.alt)
